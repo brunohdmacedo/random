@@ -1,0 +1,54 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Explicação Teórica do Modelo de Ising}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+
+O modelo de Ising é um modelo matemático utilizado em física estatística para descrever transições de fase em sistemas magnéticos. Proposto por Ernst Ising em 1925, o modelo é uma ferramenta fundamental para o estudo de fenômenos críticos em sistemas de spins.
+
+\section{Modelo de Ising em 1-D}
+
+No modelo de Ising unidimensional, os spins $\sigma_i$ estão dispostos em uma cadeia linear, onde cada spin pode assumir valores $\sigma_i = \pm 1$, representando estados de spin ``para cima'' ($+1$) ou ``para baixo'' ($-1$). O Hamiltoniano que descreve a energia do sistema é dado por:
+
+\begin{equation}
+H = -J \sum_{i=1}^{N-1} \sigma_i \sigma_{i+1} - h \sum_{i=1}^{N} \sigma_i
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $J$ é a constante de interação entre spins adjacentes. Para $J > 0$, a interação é ferromagnética, e para $J < 0$, é antiferromagnética.
+    \item $h$ é o campo magnético externo.
+    \item $N$ é o número de spins na cadeia.
+\end{itemize}
+
+Em uma dimensão, o modelo de Ising não apresenta transição de fase a temperatura finita para $h = 0$ e $J > 0$. Esta conclusão foi demonstrada originalmente por Ising.
+
+\section{Modelo de Ising em 2-D}
+
+O modelo de Ising bidimensional estende o conceito para uma rede quadrada, onde cada spin interage com seus vizinhos mais próximos nas direções horizontal e vertical. O Hamiltoniano é dado por:
+
+\begin{equation}
+H = -J \sum_{\langle i,j \rangle} \sigma_i \sigma_j - h \sum_{i} \sigma_i
+\end{equation}
+
+Aqui:
+\begin{itemize}
+    \item A soma $\langle i,j \rangle$ é realizada sobre pares de spins adjacentes.
+    \item As definições de $J$ e $h$ permanecem as mesmas.
+\end{itemize}
+
+Diferente do caso unidimensional, o modelo de Ising em 2-D apresenta uma transição de fase de segunda ordem a uma temperatura crítica $T_c$, que foi resolvida exatamente por Lars Onsager em 1944 para o caso $h = 0$. Essa transição ocorre entre uma fase desordenada (alta temperatura) e uma fase ordenada (baixa temperatura).
+
+\section{Modelo de Ising em 3-D (Opcional)}
+
+No modelo de Ising tridimensional, os spins interagem em uma rede cúbica, com cada spin interagindo com seis vizinhos mais próximos. O Hamiltoniano é semelhante ao de 2-D, mas a soma das interações ocorre em três direções. Este modelo também apresenta uma transição de fase, porém, não possui uma solução exata conhecida e é frequentemente estudado por métodos numéricos, como Monte Carlo.
+
+\end{document}
